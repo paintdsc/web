@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --red:#df2540;
+    --yellow:#fdcd56;
+    --blue:#53afef;
+    --purple:#ac90d8;
+    --orange:#f49200;
+    --brown:#c3694d;
+    --green:#7ab357;
+    --black:#293137;
+    --white:#ffffff;
+}
+
+html, body {
+    font-family:Montserrat;
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:rgb(85,57,204)
+}
+
+
+div.half {
+    width:45%;
+    height:50%;
+    position:relative;
+    margin:20px;
+    display:flex;
+}
+
+div.half:first-of-type {
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+div.px {
+    width:20px;
+    height:20px;
+    border-radius:3px;
+    background:white;
+    margin:0;
+    padding:0;
+    display:inline-block;
+}
+
+div.input {
+    width:300px;
+    background:rgba(0,0,0,.5);
+    color:white;
+    margin:2%;
+    border-radius:10px;
+    padding:5px 10px;
+    overflow:hidden;
+}
+
+span.st, span.nd {
+    border:1px solid rgb(100, 100, 184);
+    padding:0 5px;
+}
+
+span.st {
+    border-radius:7px 0 0 7px;
+}
+
+span.nd {
+    border-radius:0 7px 7px 0;
+    border-left-width:0;
+    font-weight:500;
+}
+
+span.text {
+    display:inline-block;
+    animation:infinite 3s text;
+}
+
+@keyframes text {
+    0% {transform:translateY(20px); opacity:0;}
+    20% {transform:translateY(0); opacity:1;}
+    80% {transform:translateY(0); opacity:1;}
+    100% {transform:translateY(-20px); opacity:0;}
+}
+
+div.half:last-of-type {
+    justify-content:center;
+    flex-direction:column;
+    color:white;
+}
+
+div.half:last-of-type span:first-of-type {
+    font-size:48px;
+    font-weight:600;
+}
+
+a {
+    color:white !important;
+    transform:translateX(-8px);
+    align-self:flex-start;
+    border-radius:4px;
+    text-decoration:none;
+    font-size:18px;
+    padding:8px;
+    margin:8px;
+    background:rgba(255,255,255,.3);
+    display:block;
+}
+
+@media screen and (max-width: 777px) {
+    html, body {
+        flex-direction:column-reverse;
+    }
+
+}
