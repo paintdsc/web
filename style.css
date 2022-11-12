@@ -115,5 +115,9 @@ a {
     html, body {
         flex-direction:column-reverse;
     }
+    
+    div.half {
+        width:90%;
+    }
 
 }
