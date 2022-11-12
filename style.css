@@ -27,7 +27,6 @@ html, body {
 
 div.half {
     width:45%;
-    height:40%;
     position:relative;
     margin:20px;
     display:flex;
