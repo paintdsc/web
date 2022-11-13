@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint - the ultimate Discord painting bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://paintdsc.github.io/web/paint.png">
+    <meta name="theme-color" content="#5539cc">
+    <meta name="og:site_name" content="Paint">
+    <meta name="og:title" content="Paint - the ultimate Discord painting bot">
+    <meta name="og:description" content="Paint with any emoji of your choice on a 7×7 canvas, one emoji at a time.">
+</head>
+<body>
+    <div class="half"><div class="canv">
+        <div class="px a1"></div>
+        <div class="px a2"></div>
+        <div class="px a3"></div>
+        <div class="px a4"></div>
+        <div class="px a5"></div>
+        <div class="px a6"></div>
+        <div class="px a7"></div><br>
+        <div class="px b1"></div>
+        <div class="px b2"></div>
+        <div class="px b3"></div>
+        <div class="px b4"></div>
+        <div class="px b5"></div>
+        <div class="px b6"></div>
+        <div class="px b7"></div><br>
+        <div class="px c1"></div>
+        <div class="px c2"></div>
+        <div class="px c3"></div>
+        <div class="px c4"></div>
+        <div class="px c5"></div>
+        <div class="px c6"></div>
+        <div class="px c7"></div><br>
+        <div class="px d1"></div>
+        <div class="px d2"></div>
+        <div class="px d3"></div>
+        <div class="px d4"></div>
+        <div class="px d5"></div>
+        <div class="px d6"></div>
+        <div class="px d7"></div><br>
+        <div class="px e1"></div>
+        <div class="px e2"></div>
+        <div class="px e3"></div>
+        <div class="px e4"></div>
+        <div class="px e5"></div>
+        <div class="px e6"></div>
+        <div class="px e7"></div><br>
+        <div class="px f1"></div>
+        <div class="px f2"></div>
+        <div class="px f3"></div>
+        <div class="px f4"></div>
+        <div class="px f5"></div>
+        <div class="px f6"></div>
+        <div class="px f7"></div><br>
+        <div class="px g1"></div>
+        <div class="px g2"></div>
+        <div class="px g3"></div>
+        <div class="px g4"></div>
+        <div class="px g5"></div>
+        <div class="px g6"></div>
+        <div class="px g7"></div></div>
+        <div class="input">
+            <span class="text"><span style="opacity:.5">/</span><b>paint</b> <span class="st">pixel</span><span class="nd" id="pixel">c4</span> <span class="st">emoji</span><span class="nd" id="emoji">green</span></span>
+        </div>
+    </div>
+    <div class="half">
+        <span>Paint</span>
+        <span>Paint with any emoji of your choice on a 7×7 canvas, one emoji at a time</span>
+        <a href="https://discord.com/oauth2/authorize?client_id=1040707054802849792&scope=bot%20applications.commands&permissions=140660460608">Invite me!</a>
+    </div>
+
+<script>
+    function randarr(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+    var pixeln = ""
+    var emoji = ""
+    function pixel() {
+        pixeln = randarr(['a', 'b', 'c', 'd', 'e', 'f', 'g']) + randarr(['1', '2', '3', '4', '5', '6', '7'])
+        emoji = randarr(['red', 'blue', 'orange', 'yellow', 'green', 'purple', 'brown', 'black', 'white'])
+        document.getElementById('pixel').innerText = pixeln
+        document.getElementById('emoji').innerText = emoji
+        document.getElementsByClassName(pixeln)[0].style.backgroundColor = "var(--" + emoji + ")";
+    }
+    setInterval(pixel, 3000)
+    pixel()
+    setTimeout(() => {
+    document.querySelectorAll(".px").forEach((e) => {
+        e.style.transition = ".5s"
+    })
+}, 1000)
+</script>
+</body>
+</html>
